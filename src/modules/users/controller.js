@@ -94,7 +94,6 @@ const login = async (req, res) => {
 
     const username = req.body.username;
     const password = req.body.password;
-
     const userDoc = await userModel.findOne({
       $or: [{ email: username }, { username: username }],
     });

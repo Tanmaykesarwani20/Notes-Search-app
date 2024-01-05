@@ -290,7 +290,7 @@ const shareNote = async (req, res) => {
     note.sharedWith.push(shareUser);
     const shared = await note.save();
 
-    code = 200;
+    code = 201;
     message = "user shared successfully";
     data = shared;
     const resData = customResponse({ code, message, data });
